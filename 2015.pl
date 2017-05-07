@@ -48,6 +48,8 @@ next3(A1,A2,Z3,A1,B2,A3,L1,L2,L3) :- mem3(A1,A2,Z3,L1,L2,L3), lst(Z3,L3), first(
 next3(A1,Z2,Z3,B1,A2,A3,L1,L2,L3) :- mem3(A1,Z2,Z3,L1,L2,L3), lst(Z2,L2), lst(Z3,L3), first(A2,L2),
                                       first(A3,L3), nxt(A1,B1,L1).
 
+%Q3(d)
+
 mkList(0, []) :- !.
 mkList(V, [V|L]) :- VV is V-1, mkList(VV, L).
 s(V) --> {V >= 1, VV is V*2, mkList(VV, L)}, gen(L, VV).
