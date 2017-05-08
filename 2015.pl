@@ -20,7 +20,7 @@ mem(X,[X|_]).
 mem(X,[_|Tail]) :- mem(X,Tail).
 
 %(b)
-%Red cut because different output
+% Green cut, still returns true for members of list
 
 %(c)
 lst(X,[X]).
